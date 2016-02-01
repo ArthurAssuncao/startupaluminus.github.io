@@ -1,0 +1,32 @@
+{
+  "name": "Aluminus.com.br",
+  "authors": [
+    "ArthurAssuncao <arthur.xx92@gmail.com>"
+  ],
+  "description": "Website da startup Aluminus",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "aluminus",
+    "nps",
+    "educação"
+  ],
+  "license": "MIT",
+  "homepage": "http://aluminus.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "material-icons": "~0.1.0",
+    "font-awesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "angular-material": "~1.0.x",
+    "wow": "~1.1.2",
+    "animate.css": "~3.5.0"
+  }
+}
