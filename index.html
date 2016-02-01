@@ -58,8 +58,37 @@
       </md-button>
     </div>
   </md-toolbar>
-  <main id="conteudo" layout-align="center center" layout-padding>
+  <main id="conteudo" layout-align="center center" layout-padding layout="row">
+    <div ng-controller="LeftCtrl">
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+          <!--<md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Sidenav Left</h1>
+          </md-toolbar>-->
+          <md-content layout-padding ng-controller="LeftCtrl">
+            <!--<md-button ng-click="close()" class="md-primary" hide-gt-md>
+              Close Sidenav Left
+            </md-button>-->
+            <p hide-md show-gt-md>
+              <nav id="navbar-left">
+                <ul>
+                    <li><a href="#" class="navbar-left-item" ng-click="">
+              <i class="material-icons">account_circle</i> Login</a></li>
+                    <li><a href="#" class="navbar-left-item" ng-click="">
+              <i class="material-icons">supervisor_account</i> Equipe</a></li>
+                    <li><a href="#" class="navbar-left-item" ng-click="">
+              <i class="material-icons">assessment</i> NPS</a></li>
+                    <li><a href="#" class="navbar-left-item" ng-click="">
+              <i class="material-icons">contact_mail</i> Contato</a></li>
+                    <li><a href="#" class="navbar-left-item" ng-click="">
+              <i class="material-icons">question_answer</i> FAQ</a></li>
+                </ul>
+              </nav>
+            </p>
+          </md-content>
+        </md-sidenav>
+    </div>
   	<div class="banner container" ng-controller="progressCtrl">
+  	    <span class="bar-nps-title">Descubra a lealdade dos seus alunos</span>
   		<md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
   	</div>
   </main>

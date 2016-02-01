@@ -6,6 +6,7 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log) {
                 $log.debug("abrir menu lateral");
             });
     }
+    
 });
 
 app.controller('NavRightController', function ($scope, $timeout, $mdSidenav, $log) {
@@ -15,6 +16,10 @@ app.controller('NavRightController', function ($scope, $timeout, $mdSidenav, $lo
                 $log.debug("Menu lateral direito fechado");
             });
     };
+});
+
+app.controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+
 });
 
 app.controller('progressCtrl', ['$scope', '$interval', function($scope, $interval) {

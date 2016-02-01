@@ -73,6 +73,35 @@ md-toolbar#nav_f{
         transform: translateY(50%);
         height: 500px;
     }
+    
+    #navbar-left{
+        .navbar-left-item .material-icons{
+            font-size: 1.6em;
+            vertical-align: middle;
+        }
+        a.navbar-left-item{
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        a:active.navbar-left-item, a:visited.navbar-left-item{
+            color: black;
+        }
+        a:hover.navbar-left-item{
+            color: $my-primary-color;
+        }
+        ul{
+            li{
+                padding-bottom: 20px;
+            }
+        }
+    }
+    
+    .bar-nps-title{
+        font-size: 1.5em;
+        float: right;
+        padding-bottom: 50px;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
