@@ -1,0 +1,19 @@
+// imports 
+@import "variables";
+@import "gmail-scrollbars";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+object[type^="application/gas-events-uni"] {
+    display: none;
+}
+
+html, 
+body {
+    text-shadow: 0 0 #fff;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
