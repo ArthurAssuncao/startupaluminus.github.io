@@ -25,8 +25,8 @@
   <meta name="msapplication-TileColor" content="#2196F3"/>
   <!-- Favicon-->
   <link rel="shortcut icon" href="favicon.ico"/>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" href="apple-touch-icon.png" sizes="16x16"/>
+  <!--<link rel="apple-touch-icon" href="apple-touch-icon.png"/>-->
+  <!--<link rel="icon" type="image/png" href="apple-touch-icon.png" sizes="16x16"/>-->
   <!-- CSS-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
@@ -46,10 +46,10 @@
         <div layout="row">
             <span flex="60"></span>
           	<ul flex="40" class="center" layout-wrap layout-padding layout="row">
-                <li flex><a href="#" class="white-text"><i class="medium fa fa-facebook-square white-text"></i><span class="fa-facebook-text"> Facebook</span></a></li>
-                <li flex><a href="#" class="white-text"><i class="medium fa fa-twitter-square white-text"></i><span class="fa-twitter-text"> Twitter</span></a></li>
-                <li flex><a href="#" class="white-text"><i class="medium fa fa-linkedin-square white-text"></i><span class="fa-linkedin-text"> Linkedin</span></a></li>
-                <li flex><a href="#" class="white-text"><i class="medium fa fa-instagram white-text"></i><span class="fa-instagram-text"> Instagram</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-facebook-square white-text"></i><span class="fa-facebook-text"> Facebook</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-twitter-square white-text"></i><span class="fa-twitter-text"> Twitter</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-linkedin-square white-text"></i><span class="fa-linkedin-text"> Linkedin</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-instagram white-text"></i><span class="fa-instagram-text"> Instagram</span></a></li>
             </ul>
         </div>
       </div>
@@ -58,8 +58,8 @@
       </md-button>
     </div>
   </md-toolbar>
-  <main id="conteudo" layout-align="center center" layout-padding layout="row">
-    <div ng-controller="LeftCtrl">
+  <main id="conteudo" layout-align="center center" layout-padding layout="row" class="container">
+    <div ng-controller="LeftCtrl" flex="20">
         <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
           <!--<md-toolbar class="md-theme-indigo">
             <h1 class="md-toolbar-tools">Sidenav Left</h1>
@@ -87,11 +87,32 @@
           </md-content>
         </md-sidenav>
     </div>
-  	<div class="banner container" ng-controller="progressCtrl">
-  	    <span class="bar-nps-title">Descubra a lealdade dos seus alunos</span>
+  	<div class="banner" ng-controller="progressCtrl" flex="80">
+  	    <span class="bar-nps-title">Descubra a lealdade dos seus alunos.</span>
   		<md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
   	</div>
   </main>
+  <footer layout="column" layout-align="center center" layout-padding class="container">
+    <span flex="100" class="footer-text">Tenha uma visão real da satisfação de seus estudantes</span>
+    <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false">
+        <div layout="row" layout-wrap layout-align="center center">
+          <!--<h5 class="white-text center" flex='100'>Contato</h5>-->
+          <div flex>
+            <!-- Email-->
+            <i class="material-icons icon-large">email</i>
+            <md-input-container class="md-icon-float">
+              <label>Email</label>
+              <!--<md-icon class="email">
+                </md-icon>-->
+              <input id="form-email" name="email" type="email" ng-model="contato.email">
+            </md-input-container>
+          </div>
+          <!-- Botao -->
+          <md-button flex="10" id="form-submit" class="md-primary md-raised btn-send" ng-click="submitForm($event)"><i class="material-icons white-text">send</i></md-button>
+
+        </div>
+      </form>
+  </footer>
 
 </div>
 
