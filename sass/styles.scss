@@ -17,3 +17,64 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+#conteudo{
+    width: 100%;
+}
+
+.fa-facebook-text, .fa-twitter-text, .fa-linkedin-text, .fa-instagram-text{
+    display: none;
+}
+
+.fa-facebook-square:hover, .fa-twitter-square:hover, .fa-linkedin-square:hover, .fa-instagram:hover{
+    color: $my-primary-color;
+}
+
+.social-icons{
+    ul{
+        list-style: none;
+    }
+}
+
+md-toolbar#nav_f{
+    background-color: white !important;
+    color: black !important;
+}
+
+.medium{
+    font-size: 1.5em;
+}
+
+.slogan{
+    
+}
+
+@media only screen and (min-width: 481px) {
+    
+}
+
+@media only screen and (min-width: 992px) {
+    .medium{
+        font-size: 1.5em;
+    }
+
+    .slogan{
+        font-size: 1.2em;
+        padding-top: 40px;
+    }
+    
+    .banner{
+        padding-top: 50px;
+        transform: translateY(50%);
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

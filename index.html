@@ -1,9 +1,81 @@
-<<!DOCTYPE html>
-<html>
-<head>
-	<title>Aluminus StartUp</title>
+<!DOCTYPE html><html lang="pt-br" prefix="og: http://ogp.me/ns#" ng-app="AluminusWebsite" ng-controller="AppController"><head>
+  <title>Aluminus Startup</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2196F3"/>
+  <meta name="author" content="Arthur Assunção"/>
+  <meta name="description" content="Website da Startup Aluminus"/>
+  <meta name="keywords" content="Aluminus, Startup, Educação, nps"/>
+  <!-- Opengraph-->
+  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:title" content="Aluminus Startup"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://aluminus.com.br"/>
+  <meta property="og:image" content="assets/img/logo.jpg"/>
+  <meta property="og:site_name" content="Aluminus Startup"/>
+  <meta property="og:description" content="Website da Startup Aluminus"/>
+  <!-- Twitter cards-->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:url" content="http://aluminus.com.br"/>
+  <meta name="twitter:title" content="Aluminus Startup"/>
+  <meta name="twitter:description" content="Website da Startup Aluminus"/>
+  <meta name="twitter:image" content="assets/img/logo.jpg"/>
+  <!-- Windows phone-->
+  <meta name="application-name" content="aluminus.com.br"/>
+  <meta name="msapplication-TileColor" content="#2196F3"/>
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" href="apple-touch-icon.png" sizes="16x16"/>
+  <!-- CSS-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.min.css"/>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+
+<body layout="column" id="top" class="scrollspy ng-cloak">
+<div id="principal" layout="column" layout-align="center center">
+  <md-toolbar layout="row" id="nav_f">
+    <div class="md-toolbar-tools container" layout="row">
+      <h1 flex="30" class="logo"><a href="#" class="brand-logo"><img src="assets/img/logo.jpg" width="200px"/></a></h1>
+      <div flex="40" layout="row">
+      	<span flex class="slogan" layout-wrap layout-padding>Transformando feedback em educação!</span>
+      </div>
+      <div flex="30" class="social-icons" hide show-gt-sm>
+        <div layout="row">
+            <span flex="60"></span>
+          	<ul flex="40" class="center" layout-wrap layout-padding layout="row">
+                <li flex><a href="#" class="white-text"><i class="medium fa fa-facebook-square white-text"></i><span class="fa-facebook-text"> Facebook</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="medium fa fa-twitter-square white-text"></i><span class="fa-twitter-text"> Twitter</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="medium fa fa-linkedin-square white-text"></i><span class="fa-linkedin-text"> Linkedin</span></a></li>
+                <li flex><a href="#" class="white-text"><i class="medium fa fa-instagram white-text"></i><span class="fa-instagram-text"> Instagram</span></a></li>
+            </ul>
+        </div>
+      </div>
+      <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
+        <i class="material-icons">more_vert</i>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <main id="conteudo" layout-align="center center" layout-padding>
+  	<div class="banner container" ng-controller="progressCtrl">
+  		<md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
+  	</div>
+  </main>
+
+</div>
+
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/js/modules.js"></script>
+<script type="text/javascript" src="assets/js/controllers.js"></script>
+
+<script type="text/javascript" src="assets/js/scripts.js"></script>
 
 </body>
 </html>
