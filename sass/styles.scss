@@ -39,11 +39,39 @@ body {
     ul{
         list-style: none;
     }
+    transition: margin-bottom .3s ease-in-out;
+    margin-bottom: 15px;
 }
 
 md-toolbar#nav_f{
+    height: 90px;
+    max-height: 90px;
     background-color: white !important;
     color: black !important;
+    position: fixed;
+    transition: height .4s ease-out, max-height .3s ease-out;
+    img{
+        transition: width .3s ease-in-out;
+        width: 200px;
+    }
+    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);*/
+}
+
+.nav-shrink{
+    height: 50px !important;
+    max-height: 50px !important;
+    img{
+        width: 140px !important;
+    }
+}
+
+.fa-facebook-square, .fa-facebook-text, 
+.fa-twitter-square, .fa-twitter-text, 
+.fa-github-square, .fa-github-text, 
+.fa-linkedin-square, .fa-linkedin-text,
+.fa-google-plus-square, .fa-google-plus-text,
+.fa-instagram, .fa-instagram-text {
+    transition: color .3s ease-in-out;
 }
 
 .icon-medium{
@@ -55,7 +83,7 @@ md-toolbar#nav_f{
 }
 
 .slogan{
-    
+    margin-bottom: 20px;    
 }
 
 #form-submit{
@@ -74,9 +102,22 @@ md-toolbar#nav_f{
         font-size: 1.5em;
     }
 
-    .slogan{
+    .slogan-text{
         font-size: 1.2em;
         padding-top: 40px;
+    }
+    
+    .slogan{
+        transition: margin-bottom .3s ease-in-out;
+    }
+    
+    .nav-shrink{
+        .slogan{
+            margin-bottom: 40px;
+        }
+        .social-icons{
+            margin-bottom: 40px;
+        }
     }
     
     .banner{

@@ -130,18 +130,46 @@ body {
 .fa-facebook-square:hover, .fa-twitter-square:hover, .fa-linkedin-square:hover, .fa-instagram:hover {
   color: #72b3ea; }
 
-.social-icons ul {
-  list-style: none; }
+.social-icons {
+  transition: margin-bottom .3s ease-in-out;
+  margin-bottom: 15px; }
+  .social-icons ul {
+    list-style: none; }
 
 md-toolbar#nav_f {
+  height: 90px;
+  max-height: 90px;
   background-color: white !important;
-  color: black !important; }
+  color: black !important;
+  position: fixed;
+  transition: height .4s ease-out, max-height .3s ease-out;
+  /*box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);*/ }
+  md-toolbar#nav_f img {
+    transition: width .3s ease-in-out;
+    width: 200px; }
+
+.nav-shrink {
+  height: 50px !important;
+  max-height: 50px !important; }
+  .nav-shrink img {
+    width: 140px !important; }
+
+.fa-facebook-square, .fa-facebook-text,
+.fa-twitter-square, .fa-twitter-text,
+.fa-github-square, .fa-github-text,
+.fa-linkedin-square, .fa-linkedin-text,
+.fa-google-plus-square, .fa-google-plus-text,
+.fa-instagram, .fa-instagram-text {
+  transition: color .3s ease-in-out; }
 
 .icon-medium {
   font-size: 1.5em; }
 
 .icon-large {
   font-size: 2em; }
+
+.slogan {
+  margin-bottom: 20px; }
 
 #form-submit {
   bottom: 15px; }
@@ -152,9 +180,17 @@ md-toolbar#nav_f {
   .medium {
     font-size: 1.5em; }
 
-  .slogan {
+  .slogan-text {
     font-size: 1.2em;
     padding-top: 40px; }
+
+  .slogan {
+    transition: margin-bottom .3s ease-in-out; }
+
+  .nav-shrink .slogan {
+    margin-bottom: 40px; }
+  .nav-shrink .social-icons {
+    margin-bottom: 40px; }
 
   .banner {
     padding-top: 50px;
