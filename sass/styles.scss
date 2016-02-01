@@ -94,7 +94,7 @@ md-toolbar#nav_f{
             text-decoration: none;
             font-size: 1.2em;
         }
-        a:active.navbar-left-item, a:visited.navbar-left-item{
+        a.navbar-left-item, a:active.navbar-left-item, a:visited.navbar-left-item{
             color: black;
         }
         a:hover.navbar-left-item{

@@ -167,7 +167,7 @@ md-toolbar#nav_f {
   #navbar-left a.navbar-left-item {
     text-decoration: none;
     font-size: 1.2em; }
-  #navbar-left a:active.navbar-left-item, #navbar-left a:visited.navbar-left-item {
+  #navbar-left a.navbar-left-item, #navbar-left a:active.navbar-left-item, #navbar-left a:visited.navbar-left-item {
     color: black; }
   #navbar-left a:hover.navbar-left-item {
     color: #72b3ea; }
