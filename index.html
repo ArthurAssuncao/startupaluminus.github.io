@@ -35,32 +35,32 @@
 </head>
 
 <body layout="column" id="top" class="scrollspy ng-cloak">
-<div id="principal" layout="column" layout-align="center center">
-  <md-toolbar layout="row" id="nav_f">
-    <div class="md-toolbar-tools container" layout="row">
-      <h1 flex="30" class="logo"><a href="#" class="brand-logo"><img src="assets/img/logo.jpg" width="200px"/></a></h1>
-      <div flex="40" layout="row" class="slogan">
-      	<span flex class="slogan-text" layout-wrap layout-padding>Transformando feedback em educação!</span>
-      </div>
-      <div flex="30" class="social-icons" hide show-gt-sm>
-        <div layout="row">
-            <span flex="60"></span>
-          	<ul flex="40" class="center" layout-wrap layout-padding layout="row">
-                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-facebook-square white-text"></i><span class="fa-facebook-text"> Facebook</span></a></li>
-                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-twitter-square white-text"></i><span class="fa-twitter-text"> Twitter</span></a></li>
-                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-linkedin-square white-text"></i><span class="fa-linkedin-text"> Linkedin</span></a></li>
-                <li flex><a href="#" class="white-text"><i class="icon-medium fa fa-instagram white-text"></i><span class="fa-instagram-text"> Instagram</span></a></li>
-            </ul>
+<div id="principal" layout="row" layout-wrap>
+   <div class="container hero" flex="100" layout="row" layout-wrap>
+      <md-toolbar layout="row" id="nav_f" flex="100">
+        <div class="md-toolbar-tools container" layout="row">
+          <h1 flex="40" class="logo"><a href="#" class="brand-logo"><img src="assets/img/logo-white.png" width="200px"/></a></h1>
+          <div flex="50" layout="row" class="slogan">
+          	<span flex class="slogan-text white-text" layout-wrap layout-padding>Transformando feedback em educação!</span>
+          </div>
+          <div flex="30" class="social-icons white-text" hide show-gt-sm>
+            <div layout="row">
+                <span flex="40"></span>
+              	<ul flex="50" class="center" layout-wrap layout-padding layout="row">
+                    <li flex><a href="#"><i class="icon-medium fa fa-facebook-square"></i><span class="fa-facebook-text"> Facebook</span></a></li>
+                    <li flex><a href="#"><i class="icon-medium fa fa-twitter-square"></i><span class="fa-twitter-text"> Twitter</span></a></li>
+                    <li flex><a href="#"><i class="icon-medium fa fa-linkedin-square"></i><span class="fa-linkedin-text"> Linkedin</span></a></li>
+                    <li flex><a href="#"><i class="icon-medium fa fa-instagram"></i><span class="fa-instagram-text"> Instagram</span></a></li>
+                </ul>
+            </div>
+          </div>
+          <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
+            <i class="material-icons">more_vert</i>
+          </md-button>
         </div>
-      </div>
-      <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
-        <i class="material-icons">more_vert</i>
-      </md-button>
-    </div>
-  </md-toolbar>
-  <main id="conteudo" layout-align="center center" layout-padding layout="row" class="container">
-    <div ng-controller="LeftCtrl" flex="20">
-        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      </md-toolbar>
+      <div ng-controller="LeftCtrl" flex="20" class="navbar-left">
+        <md-sidenav class="md-sidenav-left transparent" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
           <!--<md-toolbar class="md-theme-indigo">
             <h1 class="md-toolbar-tools">Sidenav Left</h1>
           </md-toolbar>-->
@@ -68,9 +68,8 @@
             <!--<md-button ng-click="close()" class="md-primary" hide-gt-md>
               Close Sidenav Left
             </md-button>-->
-            <p hide-md show-gt-md>
-              <nav id="navbar-left">
-                <ul>
+              <nav id="navbar-left" hide-md show-gt-md>
+                <ul class="white-text">
                     <li><a href="#" class="navbar-left-item" ng-click="">
               <i class="material-icons">account_circle</i> Login</a></li>
                     <li><a href="#" class="navbar-left-item" ng-click="">
@@ -83,35 +82,68 @@
               <i class="material-icons">question_answer</i> FAQ</a></li>
                 </ul>
               </nav>
-            </p>
           </md-content>
         </md-sidenav>
+      </div>
+      <div flex="100" layout="row" layout-wrap class="container">
+          <span flex="30"></span>
+          <div flex="50" layout="row" layout-wrap>
+              <span flex="100" class="footer-text white-text">Tenha uma visão real da satisfação de seus estudantes</span>
+              <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false">
+                <div layout="row" layout-align="center" >
+                  <!--<h5 class="white-text center" flex='100'>Contato</h5>-->
+                  <div flex="100" layout="row">
+                    <!-- Email-->
+                    <i class="material-icons icon-large white-text icon-email">email</i>
+                    <md-input-container class="md-icon-float" flex="100">
+                      <label>Email</label>
+                      <!--<md-icon class="email">
+                        </md-icon>-->
+                      <input id="form-email" name="email" type="email" ng-model="contato.email" >
+                    </md-input-container>
+                  </div>
+                  <!-- Botao -->
+                  <md-button flex="10" id="form-submit" class="md-primary md-raised btn-send" ng-click="submitForm($event)"><i class="material-icons white-text">send</i></md-button>
+
+                </div>
+              </form>
+          </div>
+       </div>
     </div>
+   <main flex="100" id="conteudo" layout-align="center" layout-wrap layout="row" class="container">
   	<div class="banner" ng-controller="progressCtrl" flex="80">
   	    <span class="bar-nps-title">Descubra a lealdade dos seus alunos.</span>
   		<md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
   	</div>
-  </main>
-  <footer layout="column" layout-align="center center" layout-padding class="container">
-    <span flex="100" class="footer-text">Tenha uma visão real da satisfação de seus estudantes</span>
-    <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false">
-        <div layout="row" layout-wrap layout-align="center center">
-          <!--<h5 class="white-text center" flex='100'>Contato</h5>-->
-          <div flex>
-            <!-- Email-->
-            <i class="material-icons icon-large">email</i>
-            <md-input-container class="md-icon-float">
-              <label>Email</label>
-              <!--<md-icon class="email">
-                </md-icon>-->
-              <input id="form-email" name="email" type="email" ng-model="contato.email">
-            </md-input-container>
+    <div flex="100" class="ideais white-text">
+      <div class="container">
+        <div layout="row" layout-wrap layout-align="center" layout-padding>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div class="center promo"><i class="material-icons icon-xxxxlarge">lightbulb_outline</i>
+              <h5 class="promo-caption">Inovação</h5>
+              <p class="light center promo-description justify">Acreditamos em nosso potencial de incentivar a cultura de inovação dentro das instituições de Minas Gerais.</p>
+            </div>
           </div>
-          <!-- Botao -->
-          <md-button flex="10" id="form-submit" class="md-primary md-raised btn-send" ng-click="submitForm($event)"><i class="material-icons white-text">send</i></md-button>
-
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div class="center promo"><i class="material-icons icon-xxxxlarge">assignment</i>
+              <h5 class="promo-caption">Gerenciamento inteligente</h5>
+              <p class="light center promo-description justify">Temos como sonho a melhoria das instituições por meio de feedbacks e de uma gestão inteligente que permite reter muito mais os estudantes.</p>
+            </div>
+          </div>
+          <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
+            <div class="center promo"><i class="material-icons icon-xxxxlarge">trending_up</i>
+              <h5 class="promo-caption">Melhor estratégia</h5>
+              <p class="light center promo-description justify">Com nossa ferramenta, sua instituição de ensino pode analisar os gargalos e criar estratégias de relacionamento com os estudantes.</p>
+            </div>
+          </div>
         </div>
-      </form>
+      </div>
+    </div>
+  </main>
+  <footer flex="100" layout="row" layout-align="center" layout-padding class="footer" layout-wrap>
+    <div class="container white-text center">
+      Aluminus Startup 2016
+    </div>
   </footer>
 
 </div>

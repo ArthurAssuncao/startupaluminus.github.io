@@ -1,3 +1,139 @@
+/* reset */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption,
+td,
+th {
+  text-align: left;
+  font-weight: 400;
+  vertical-align: middle; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
 /* Gmail style scrollbar */
 ::-webkit-scrollbar {
   width: 12px; }
@@ -128,31 +264,56 @@ body {
   display: none; }
 
 .fa-facebook-square:hover, .fa-twitter-square:hover, .fa-linkedin-square:hover, .fa-instagram:hover {
-  color: #72b3ea; }
+  color: #72b3ea;
+  opacity: 1; }
 
 .social-icons {
-  transition: margin-bottom .3s ease-in-out;
-  margin-bottom: 15px; }
+  padding-top: 22px;
+  transition: margin-bottom .3s ease-in-out, padding-top .3s ease-in-out; }
   .social-icons ul {
-    list-style: none; }
+    list-style: none;
+    opacity: 0.9; }
+
+.ideais {
+  background-color: #72b3ea;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.footer {
+  background-color: #212121 !important; }
 
 md-toolbar#nav_f {
-  height: 90px;
-  max-height: 90px;
-  background-color: white !important;
+  height: 110px;
+  max-height: 110px;
+  /*background-color: rgba(0, 0, 0, 0.49) !important;*/
+  background-color: rgba(113, 180, 235, 0.49) !important;
+  /*background-color: rgba(33, 150, 243, 0.49) !important;*/
   color: black !important;
   position: fixed;
   transition: height .4s ease-out, max-height .3s ease-out, box-shadow .5s ease-in; }
   md-toolbar#nav_f img {
     transition: width .3s ease-in-out;
-    width: 200px; }
+    width: 200px;
+    padding-top: 10px; }
+
+.transparent {
+  background-color: transparent !important; }
+
+.hero {
+  background-image: url("/assets/img/546186711743c1f4342d1efe_Hero.jpg");
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px; }
 
 .nav-shrink {
   height: 50px !important;
   max-height: 50px !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
   .nav-shrink img {
-    width: 140px !important; }
+    width: 120px !important;
+    padding-top: 5px !important; }
 
 .fa-facebook-square, .fa-facebook-text,
 .fa-twitter-square, .fa-twitter-text,
@@ -162,53 +323,107 @@ md-toolbar#nav_f {
 .fa-instagram, .fa-instagram-text {
   transition: color .3s ease-in-out; }
 
+.white-text {
+  color: white; }
+
+.amber-text {
+  color: #FFC107; }
+
+.blue-text {
+  color: #72b3ea; }
+
+.center {
+  text-align: center; }
+
+.center-align {
+  margin: 0 auto; }
+
+.promo-caption {
+  font-size: 1.5em;
+  line-height: 2em; }
+
+.promo-description {
+  line-height: 1.5em; }
+
+.justify {
+  text-align: justify; }
+
 .icon-medium {
   font-size: 1.5em; }
 
 .icon-large {
   font-size: 2em; }
 
+.icon-xxxxlarge {
+  font-size: 6em; }
+
 .slogan {
   margin-bottom: 20px; }
 
-#form-submit {
-  bottom: 15px; }
-  #form-submit i {
-    vertical-align: sub; }
+.slogan-text {
+  font-family: serif;
+  font-style: italic; }
+
+#form-submit i {
+  vertical-align: middle;
+  padding-bottom: 5px; }
+
+.btn-send {
+  height: 30px;
+  top: 10px; }
+
+#form-contact input, #form-contact textarea {
+  border-bottom: 1px solid #fff;
+  color: white !important; }
+#form-contact md-input-container.md-default-theme .md-input, #form-contact md-input-container .md-input {
+  border-color: white; }
+#form-contact #form-email {
+  color: white; }
+#form-contact i.icon-email {
+  padding-top: 19px; }
 
 @media only screen and (min-width: 992px) {
   .medium {
     font-size: 1.5em; }
 
   .slogan-text {
-    font-size: 1.2em;
-    padding-top: 40px; }
+    font-size: 1em;
+    padding-top: 52px;
+    text-transform: uppercase; }
 
   .slogan {
     transition: margin-bottom .3s ease-in-out; }
 
   .nav-shrink .slogan {
     margin-bottom: 40px; }
+  .nav-shrink .slogan-text {
+    padding-top: 40px; }
   .nav-shrink .social-icons {
-    margin-bottom: 40px; }
+    padding-top: 0px; }
 
   .banner {
     padding-top: 50px;
     transform: translateY(25%);
     height: 500px; }
 
-  #navbar-left .navbar-left-item .material-icons {
-    font-size: 1.6em;
-    vertical-align: middle; }
-  #navbar-left a.navbar-left-item {
-    text-decoration: none;
-    font-size: 1.2em; }
-  #navbar-left a.navbar-left-item, #navbar-left a:active.navbar-left-item, #navbar-left a:visited.navbar-left-item {
-    color: black; }
-  #navbar-left a:hover.navbar-left-item {
-    color: #72b3ea; }
-  #navbar-left ul li {
-    padding-bottom: 20px; }
+  #navbar-left {
+    padding-top: 150px;
+    padding-left: 65px; }
+    #navbar-left .navbar-left-item .material-icons {
+      font-size: 1.6em;
+      vertical-align: middle; }
+    #navbar-left a.navbar-left-item {
+      text-decoration: none;
+      font-size: 1.2em; }
+    #navbar-left a.navbar-left-item, #navbar-left a:active.navbar-left-item, #navbar-left a:visited.navbar-left-item {
+      color: white; }
+    #navbar-left a:hover.navbar-left-item {
+      color: #72b3ea; }
+    #navbar-left ul li {
+      padding-bottom: 30px; }
+
+  .md-sidenav-left md-content.md-default-theme, .md-sidenav-left md-content {
+    background-color: transparent !important; }
 
   .bar-nps-title {
     font-size: 1.5em;
