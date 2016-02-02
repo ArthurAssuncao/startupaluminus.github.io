@@ -290,7 +290,7 @@ md-toolbar#nav_f {
   /*background-color: rgba(33, 150, 243, 0.49) !important;*/
   color: black !important;
   position: fixed;
-  transition: height .4s ease-out, max-height .3s ease-out, box-shadow .5s ease-in; }
+  transition: height .3s ease-out, max-height .3s ease-out, box-shadow .3s ease-in; }
   md-toolbar#nav_f img {
     transition: width .3s ease-in-out;
     width: 200px;
@@ -362,7 +362,8 @@ md-toolbar#nav_f {
 
 .slogan-text {
   font-family: serif;
-  font-style: italic; }
+  font-style: italic;
+  transition: padding-top .3s ease-in-out; }
 
 #form-submit i {
   vertical-align: middle;
@@ -413,6 +414,9 @@ ul li {
 @media only screen and (min-width: 600px) {
   a.navbar-left-item, a:active.navbar-left-item, a:visited.navbar-left-item {
     color: white; }
+
+  a:hover.navbar-left-item {
+    color: #72b3ea; }
 
   .transparent {
     background-color: transparent !important; }
