@@ -9,11 +9,11 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log) {
 
 });
 
-app.controller('NavRightController', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.close = function () {
-        $mdSidenav('right').close()
+app.controller('NavLeftController', function ($scope, $timeout, $mdSidenav, $log) {
+    $scope.closeSidebar = function () {
+        $mdSidenav('left').close()
             .then(function () {
-                $log.debug("Menu lateral direito fechado");
+                $log.debug("Menu lateral fechado");
             });
     };
 });
