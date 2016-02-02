@@ -37,10 +37,13 @@
 <body layout="column" id="top" class="scrollspy ng-cloak">
 <div id="principal" layout="row" layout-wrap>
    <div class="container hero" flex="100" layout="row" layout-wrap>
-      <md-toolbar layout="row" id="nav_f" flex="100">
+      <md-toolbar layout="row" id="nav_f" flex-sm="100" flex-gt-sm="100">
         <div class="md-toolbar-tools container" layout="row">
+          <md-button flex="10" hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
+            <i class="material-icons white-text">more_vert</i>
+          </md-button>
           <h1 flex="40" class="logo"><a href="#" class="brand-logo"><img src="assets/img/logo-white.png" width="200px"/></a></h1>
-          <div flex="50" layout="row" class="slogan">
+          <div flex="50" layout="row" class="slogan" hide show-gt-xs>
           	<span flex class="slogan-text white-text" layout-wrap layout-padding>Transformando feedback em educação!</span>
           </div>
           <div flex="30" class="social-icons white-text" hide show-gt-sm>
@@ -54,13 +57,10 @@
                 </ul>
             </div>
           </div>
-          <md-button hide-gt-sm flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
-            <i class="material-icons">more_vert</i>
-          </md-button>
         </div>
       </md-toolbar>
-      <div ng-controller="LeftCtrl" flex="20" class="navbar-left">
-        <md-sidenav class="md-sidenav-left transparent" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <div ng-controller="LeftCtrl" flex-sm="20" flex-gt-sm="20" class="navbar-left">
+        <md-sidenav class="md-sidenav-left transparent" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')">
           <!--<md-toolbar class="md-theme-indigo">
             <h1 class="md-toolbar-tools">Sidenav Left</h1>
           </md-toolbar>-->
@@ -68,7 +68,7 @@
             <!--<md-button ng-click="close()" class="md-primary" hide-gt-md>
               Close Sidenav Left
             </md-button>-->
-              <nav id="navbar-left" hide-md show-gt-md>
+              <nav id="navbar-left" hide-sm show-gt-xs>
                 <ul class="white-text">
                     <li><a href="#" class="navbar-left-item" ng-click="">
               <i class="material-icons">account_circle</i> Login</a></li>
@@ -85,10 +85,11 @@
           </md-content>
         </md-sidenav>
       </div>
-      <div flex="100" layout="row" layout-wrap class="container">
-          <span flex="30"></span>
-          <div flex="50" layout="row" layout-wrap>
-              <span flex="100" class="footer-text white-text">Tenha uma visão real da satisfação de seus estudantes</span>
+      <div hide show-xs flex="100"></div>
+      <div flex-sm="100" flex-gt-sm="100" layout="row" layout-wrap layout-padding class="container md-block">
+          <span flex-xs="100" flex-gt-sm hide show-gt-xs></span>
+          <div flex-xs="100" flex-gt-md="50" layout="row" layout-wrap>
+              <span flex="100" class="form-contact-text white-text">Tenha uma visão real da satisfação de seus estudantes</span>
               <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false">
                 <div layout="row" layout-align="center" >
                   <!--<h5 class="white-text center" flex='100'>Contato</h5>-->
@@ -108,6 +109,7 @@
                 </div>
               </form>
           </div>
+          <span flex-xs="100" flex-gt-sm hide show-gt-xs></span>
        </div>
     </div>
    <main flex="100" id="conteudo" layout-align="center" layout-wrap layout="row" class="container">

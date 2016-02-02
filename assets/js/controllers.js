@@ -1,12 +1,12 @@
 // AngularJS controllers
 app.controller('AppController', function($scope, $timeout, $mdSidenav, $log) {
     $scope.openSideMenu = function(){
-        $mdSidenav('right').toggle()
+        $mdSidenav('left').toggle()
             .then(function () {
                 $log.debug("abrir menu lateral");
             });
     }
-    
+
 });
 
 app.controller('NavRightController', function ($scope, $timeout, $mdSidenav, $log) {
