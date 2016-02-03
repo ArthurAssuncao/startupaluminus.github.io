@@ -60,7 +60,7 @@
         </div>
       </md-toolbar>
       <div ng-controller="NavLeftController" flex-sm="20" flex-gt-sm="20" class="navbar-left">
-        <md-sidenav class="md-sidenav-left transparent" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')">
+        <md-sidenav class="md-sidenav-left transparent wow-nonmobile fadeInLeft" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')">
           <!--<md-toolbar class="md-theme-indigo">
             <h1 class="md-toolbar-tools">Sidenav Left</h1>
           </md-toolbar>-->
@@ -88,7 +88,7 @@
       <div hide show-xs flex="100"></div>
       <div flex-sm="100" flex-gt-sm="100" layout="row" layout-wrap layout-padding class="container md-block">
           <span flex-xs="100" flex-gt-sm hide show-gt-xs></span>
-          <div flex-xs="100" flex-gt-md="50" layout="row" layout-wrap>
+          <div flex-xs="100" flex-gt-md="50" layout="row" layout-wrap class="wow-nonmobile fadeInUp">
               <span flex="100" class="form-contact-text white-text">Tenha uma visão real da satisfação de seus estudantes</span>
               <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false">
                 <div layout="row" layout-align="center" >
@@ -114,26 +114,29 @@
     </div>
    <main flex="100" id="conteudo" layout-align="center" layout-wrap layout="row" class="container">
   	<div class="banner" ng-controller="progressCtrl" flex="80">
-  	    <span class="bar-nps-title">Descubra a lealdade dos seus alunos.</span>
-  		<md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
+      <span class="bar-nps-title">Descubra a lealdade dos seus alunos.</span>
+      <md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
+      <div class="nps-bar">
+        <div class="nps-bar-0-6"></div><div class="nps-bar-7-8"></div><div class="nps-bar-9-10 arrow-box-right"></div>
+      </div>
   	</div>
     <div flex="100" class="ideais white-text">
       <div class="container">
         <div layout="row" layout-wrap layout-align="center" layout-padding>
           <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
-            <div class="center promo"><i class="material-icons icon-xxxxlarge">lightbulb_outline</i>
+            <div class="center promo wow-nonmobile fadeIn"><i class="material-icons icon-xxxxlarge">lightbulb_outline</i>
               <h5 class="promo-caption">Inovação</h5>
               <p class="light center promo-description justify">Acreditamos em nosso potencial de incentivar a cultura de inovação dentro das instituições de Minas Gerais.</p>
             </div>
           </div>
           <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
-            <div class="center promo"><i class="material-icons icon-xxxxlarge">assignment</i>
+            <div class="center promo wow-nonmobile fadeIn"><i class="material-icons icon-xxxxlarge">assignment</i>
               <h5 class="promo-caption">Gestão inteligente</h5>
               <p class="light center promo-description justify">Temos como sonho a melhoria das instituições por meio de feedbacks e de uma gestão inteligente que permite reter muito mais os estudantes.</p>
             </div>
           </div>
           <div flex-xs="100" flex-sm="100" flex-md flex-gt-md>
-            <div class="center promo"><i class="material-icons icon-xxxxlarge">trending_up</i>
+            <div class="center promo wow-nonmobile fadeIn"><i class="material-icons icon-xxxxlarge">trending_up</i>
               <h5 class="promo-caption">Melhor estratégia</h5>
               <p class="light center promo-description justify">Com nossa ferramenta, sua instituição de ensino pode analisar os gargalos e criar estratégias de relacionamento com os estudantes.</p>
             </div>
@@ -155,6 +158,7 @@
 <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
 
 <script type="text/javascript" src="assets/js/modules.js"></script>
 <script type="text/javascript" src="assets/js/controllers.js"></script>

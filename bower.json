@@ -26,7 +26,7 @@
     "font-awesome": "~4.4.0",
     "jquery": "~2.1.4",
     "angular-material": "~1.0.x",
-    "wow": "~1.1.2",
-    "animate.css": "~3.5.0"
+    "wow": "^1.1.2",
+    "animate.css": "^3.5.1"
   }
 }

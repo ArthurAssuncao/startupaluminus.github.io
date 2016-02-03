@@ -2,6 +2,7 @@
 @import "reset";
 @import "variables";
 @import "gmail-scrollbars";
+@import "animatecss";
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
@@ -266,6 +267,61 @@ ul{
           background-color: transparent !important;
       }
   }
+  .nps-bar{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    div{
+      display: inline-block;
+    }
+    .nps-bar-0-6{
+      content: " ";
+      width: 60%;
+      background-color: red;
+      height: 20px;
+    }
+    .nps-bar-7-8{
+      content: " ";
+      width: 20%;
+      background-color: gray;
+      height: 20px;
+    }
+    .nps-bar-9-10{
+      content: " ";
+      width: 20%;
+      background-color: green;
+      height: 20px;
+    }
+    .arrow-box-right {
+    	position: relative;
+    	background: #00ff00;
+    	// border: 4px solid #ccc;
+    }
+    .arrow-box-right:after, .arrow-box-right:before {
+    	left: 100%;
+    	top: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    }
+
+    .arrow-box-right:after {
+    	border-color: rgba(0, 255, 0, 0);
+    	// border-left-color: #00ff00;
+    	border-width: 10px;
+    	margin-top: -10px;
+    }
+    // .arrow-box-right:before {
+    // 	border-color: rgba(204, 204, 204, 0);
+    // 	border-left-color: #ccc;
+    // 	border-width: 36px;
+    // 	margin-top: -36px;
+    // }
+  }
+
 }
 
 @media only screen and (min-width: 992px) {

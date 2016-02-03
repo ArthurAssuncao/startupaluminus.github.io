@@ -1,3 +1,14 @@
+function init_wow(){
+    // new WOW().init();
+    new WOW({
+        boxClass:     'wow-nonmobile',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       false,       // default
+        live:         true        // default
+    }).init(); //wow-nonmobile
+}
+
 function scrollspy(){
     $(window).scroll(function() {
       if ($(document).scrollTop() > 50) {
@@ -12,4 +23,5 @@ function scrollspy(){
 
 $(document).ready(function(){
     scrollspy();
+    init_wow();
 });
