@@ -30,7 +30,7 @@
   <!-- CSS-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.5/angular-material.min.css"/>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -38,15 +38,14 @@
 <div id="principal" layout="row" layout-wrap>
    <div class="container hero" flex="100" layout="row" layout-wrap>
       <md-toolbar layout="row" id="nav_f" flex-sm="100" flex-gt-sm="100">
-        <div class="md-toolbar-tools container" layout="row">
-          <md-button flex="10" hide-gt-xs flex class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
+        <div class="md-toolbar-tools container" layout="row" layout-align="center">
+          <md-button flex-xs="10" hide-gt-xs class="md-icon-button" aria-label="More" ng-click="openSideMenu()">
             <i class="material-icons white-text">more_vert</i>
           </md-button>
-          <h1 flex="40" class="logo"><a href="#" class="brand-logo"><img src="assets/img/logo-white.png" width="200px"/></a></h1>
+          <h1 flex-xs="60" flex-gt-xs="40" class="logo center"><a href="#" class="brand-logo"><img src="assets/img/logo-white.png"/></a></h1>
           <div flex="50" layout="row" class="slogan" hide show-gt-xs>
           	<span flex class="slogan-text white-text" layout-wrap layout-padding>Transformando feedback em educação!</span>
           </div>
-          <div hide show-xs flex="10" flex></div>
           <div flex="30" class="social-icons white-text" hide show-gt-sm>
             <div layout="row">
                 <span flex="40"></span>
