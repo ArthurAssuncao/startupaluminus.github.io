@@ -227,6 +227,8 @@ ul{
 .quem-somos{
   min-height: 320px;
   background-color: #f7f7f7;
+  padding-top: 40px;
+  padding-bottom: 40px;
   .quem-somos-emocoes{
     i{
       font-size: 4em;
@@ -389,11 +391,15 @@ ul{
     	margin-top: -10px;
     }
   }
-  .bar-chart-text-title{
-    font-size: 2.2em;
-  }
-  .bar-chart-text-desc{
-    font-size: 1.5em;
+  .bar-chart{
+    .bar-chart-text-title{
+      font-size: 2em;
+    }
+    .bar-chart-text-desc{
+      font-size: 1.6em;
+      line-height: 1.3em;
+      margin-top: 10px;
+    }
   }
   .quem-somos{
     min-height: 320px;

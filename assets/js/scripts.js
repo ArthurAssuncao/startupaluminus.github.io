@@ -30,7 +30,7 @@ function barchartrender(){
     yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
 
-    var margin = {top: 40, right: 0, bottom: 0, left: 0},
+    var margin = {top: 50, right: 0, bottom: 0, left: 0},
     width = $('#bar-chart-bg').width() - margin.left - margin.right,
     height = $('#bar-chart-bg').height() - margin.top - margin.bottom;
     // width = 960 - margin.left - margin.right,
@@ -141,6 +141,10 @@ rect.transition()
     return a.map(function(d, i) { return {x: i, y: Math.max(0, d)}; });
   }
 }
+
+$(window).resize(function() {
+    barchartrender();
+});
 
 $(document).ready(function(){
     scrollspy();
