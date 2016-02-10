@@ -132,6 +132,7 @@ md-toolbar#nav_f{
 
 .promo-description{
     line-height: 1.5em;
+    font-size: 1.1em;
 }
 
 .justify{
@@ -241,7 +242,7 @@ ul{
     }
   }
   .quem-somos-text{
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.5em;
     color: #444;
   }
@@ -287,11 +288,11 @@ ul{
     text-shadow: 0 2px 0 rgba(0,0,0,0.3);
   }
   .bar-chart-text-title{
-    font-size: 2.2em;
+    font-size: 1.7em;
   }
   .bar-chart-text-desc{
     padding-top: 30px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #e1effb;
   }
 }
@@ -387,12 +388,24 @@ ul{
     	border-width: 10px;
     	margin-top: -10px;
     }
-    // .arrow-box-right:before {
-    // 	border-color: rgba(204, 204, 204, 0);
-    // 	border-left-color: #ccc;
-    // 	border-width: 36px;
-    // 	margin-top: -36px;
-    // }
+  }
+  .bar-chart-text-title{
+    font-size: 2.2em;
+  }
+  .bar-chart-text-desc{
+    font-size: 1.5em;
+  }
+  .quem-somos{
+    min-height: 320px;
+    .quem-somos-emocoes{
+      i{
+        font-size: 4em;
+      }
+    }
+    .quem-somos-text{
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
   }
 
 }

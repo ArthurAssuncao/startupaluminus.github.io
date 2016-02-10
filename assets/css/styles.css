@@ -2527,7 +2527,8 @@ md-toolbar#nav_f {
   line-height: 2em; }
 
 .promo-description {
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-size: 1.1em; }
 
 .justify {
   text-align: justify; }
@@ -2607,7 +2608,7 @@ ul li {
   .quem-somos .quem-somos-emocoes .nps-red-text {
     opacity: 0.6; }
   .quem-somos .quem-somos-text {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.5em;
     color: #444; }
 
@@ -2643,10 +2644,10 @@ ul li {
     position: relative;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3); }
   .bar-chart .bar-chart-text-title {
-    font-size: 2.2em; }
+    font-size: 1.7em; }
   .bar-chart .bar-chart-text-desc {
     padding-top: 30px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #e1effb; }
 
 @media only screen and (min-width: 600px) {
@@ -2718,7 +2719,21 @@ ul li {
     .nps-bar .arrow-box-right:after {
       border-color: rgba(0, 255, 0, 0);
       border-width: 10px;
-      margin-top: -10px; } }
+      margin-top: -10px; }
+
+  .bar-chart-text-title {
+    font-size: 2.2em; }
+
+  .bar-chart-text-desc {
+    font-size: 1.5em; }
+
+  .quem-somos {
+    min-height: 320px; }
+    .quem-somos .quem-somos-emocoes i {
+      font-size: 4em; }
+    .quem-somos .quem-somos-text {
+      font-size: 1.1em;
+      line-height: 1.5em; } }
 @media only screen and (min-width: 992px) {
   .medium {
     font-size: 1.5em; }
