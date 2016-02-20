@@ -10,18 +10,18 @@
   <meta property="og:locale" content="pt_BR"/>
   <meta property="og:title" content="Aluminus Startup"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="http://aluminus.com.br"/>
-  <meta property="og:image" content="assets/img/logo.jpg"/>
+  <meta property="og:url" content="http://startupaluminus.github.io"/>
+  <meta property="og:image" content="http://startupaluminus.github.io/assets/img/logo.jpg"/>
   <meta property="og:site_name" content="Aluminus Startup"/>
   <meta property="og:description" content="Website da Startup Aluminus"/>
   <!-- Twitter cards-->
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:url" content="http://aluminus.com.br"/>
+  <meta name="twitter:url" content="http://startupaluminus.github.io"/>
   <meta name="twitter:title" content="Aluminus Startup"/>
   <meta name="twitter:description" content="Website da Startup Aluminus"/>
-  <meta name="twitter:image" content="assets/img/logo.jpg"/>
+  <meta name="twitter:image" content="http://startupaluminus.github.io/assets/img/logo.jpg"/>
   <!-- Windows phone-->
-  <meta name="application-name" content="aluminus.com.br"/>
+  <meta name="application-name" content="Aluminus.com.br"/>
   <meta name="msapplication-TileColor" content="#2196F3"/>
   <!-- Favicon-->
   <link rel="shortcut icon" href="favicon.ico"/>
@@ -50,8 +50,8 @@
             <div layout="row">
                 <span flex="40"></span>
               	<ul flex="50" class="center" layout-wrap layout-padding layout="row">
-                    <li flex><a href="#"><i class="icon-medium fa fa-facebook-square"></i><span class="fa-facebook-text"> Facebook</span></a></li>
-                    <li flex><a href="#"><i class="icon-medium fa fa-twitter-square"></i><span class="fa-twitter-text"> Twitter</span></a></li>
+                    <li flex><a href="https://www.facebook.com/startupaluminus"><i class="icon-medium fa fa-facebook-square"></i><span class="fa-facebook-text"> Facebook</span></a></li>
+                    <li flex><a href="https://twitter.com/startupaluminus"><i class="icon-medium fa fa-twitter-square"></i><span class="fa-twitter-text"> Twitter</span></a></li>
                     <li flex><a href="#"><i class="icon-medium fa fa-linkedin-square"></i><span class="fa-linkedin-text"> Linkedin</span></a></li>
                     <li flex><a href="#"><i class="icon-medium fa fa-instagram"></i><span class="fa-instagram-text"> Instagram</span></a></li>
                 </ul>
@@ -90,7 +90,7 @@
           <span flex-xs="100" flex-gt-sm hide show-gt-xs></span>
           <div flex-xs="100" flex-gt-md="50" layout="row" layout-wrap class="wow-nonmobile fadeInUp">
               <span flex="100" class="form-contact-text white-text">Tenha uma visão real da satisfação de seus estudantes</span>
-              <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false">
+              <form flex="100" id="form-contact" name="form-contact" onsubmit="javascript:return false" action="//formspree.io/startupaluminus@gmail.com" method="POST">
                 <div layout="row" layout-align="center" >
                   <!--<h5 class="white-text center" flex='100'>Contato</h5>-->
                   <div flex="100" layout="row">
@@ -100,7 +100,14 @@
                       <label>Email</label>
                       <!--<md-icon class="email">
                         </md-icon>-->
-                      <input id="form-email" name="email" type="email" ng-model="contato.email" >
+                      <input id="form-email" name="_replyto" type="email" ng-model="contato.email" >
+                    </md-input-container>
+                    <!-- Hide-->
+                    <md-input-container hide flex='100' class="md-icon-float">
+                      <input id="form-hidden" aria-label="hidden1" type="hidden" name="_subject" value="Contato pelo site" required=""/>
+                    </md-input-container>
+                    <md-input-container hide flex='100' class="md-icon-float">
+                      <input id="form-hidden-text" aria-label="hidden2" type="text" name="_gotcha" style="display:none" required=""/>
                     </md-input-container>
                   </div>
                   <!-- Botao -->
@@ -113,13 +120,6 @@
        </div>
     </div>
    <main flex="100" id="conteudo" layout-align="center" layout-wrap layout="row" class="container">
-  	<div class="banner" ng-controller="progressCtrl" flex="80" hide>
-      <span class="bar-nps-title">Descubra a lealdade dos seus alunos.</span>
-      <md-progress-linear md-mode="determinate" value="100"></md-progress-linear>
-      <div class="nps-bar">
-        <div class="nps-bar-0-6"></div><div class="nps-bar-7-8"></div><div class="nps-bar-9-10 arrow-box-right"></div>
-      </div>
-  	</div>
     <div class="bar-chart wow-nonmobile fadeIn" data-wow-duration="2s" flex="100">
       <div class="bar-chart-text center">
         <span class="bar-chart-text-title white-text">Descubra a lealdade dos seus alunos</span><br />

@@ -48,12 +48,6 @@ var color = d3.scale.linear()
     .domain([0, n - 1])
     .range(["#2196F3", "#5ca8e7"]);
 
-// var xAxis = d3.svg.axis()
-//     .scale(x)
-//     .tickSize(0)
-//     .tickPadding(6)
-//     .orient("bottom");
-
 var svg = d3.select("#bar-chart-bg").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -79,49 +73,6 @@ rect.transition()
     .attr("y", function(d) { return y(d.y0 + d.y); })
     .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); });
 
-// svg.append("g")
-//     .attr("class", "x axis")
-//     .attr("transform", "translate(0," + height + ")")
-//     .call(xAxis);
-
-// d3.selectAll("input").on("change", change);
-
-// var timeout = setTimeout(function() {
-//   d3.select("input[value=\"grouped\"]").property("checked", true).each(change);
-// }, 2000);
-
-// function change() {
-//   clearTimeout(timeout);
-//   if (this.value === "grouped") transitionGrouped();
-//   else transitionStacked();
-// }
-
-// function transitionGrouped() {
-//   y.domain([0, yGroupMax]);
-//
-//   rect.transition()
-//       .duration(500)
-//       .delay(function(d, i) { return i * 10; })
-//       .attr("x", function(d, i, j) { return x(d.x) + x.rangeBand() / n * j; })
-//       .attr("width", x.rangeBand() / n)
-//     .transition()
-//       .attr("y", function(d) { return y(d.y); })
-//       .attr("height", function(d) { return height - y(d.y); });
-// }
-
-// function transitionStacked() {
-//   y.domain([0, yStackMax]);
-//
-//   rect.transition()
-//       .duration(500)
-//       .delay(function(d, i) { return i * 10; })
-//       .attr("y", function(d) { return y(d.y0 + d.y); })
-//       .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
-//     .transition()
-//       .attr("x", function(d) { return x(d.x); })
-//       .attr("width", x.rangeBand());
-// }
-
   // Inspired by Lee Byron's test data generator.
   function bumpLayer(n, o) {
 
@@ -142,12 +93,34 @@ rect.transition()
   }
 }
 
-$(window).resize(function() {
-    barchartrender();
-});
+function add_contact_form_click() {
+    $('#form-contact').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "//formspree.io/startupaluminus@gmail.com",
+            method: "POST",
+            data: {
+                message: "Cadastrar na newsletter para receber mais informacoes da Aluminus",
+                _replyto: $('#form-email').val(),
+                name: $('#form-email').val()},
+            dataType: "json",
+            success: function(data) {
+                msg_send(true);
+            },
+            error: function(data) {
+                msg_send(false);
+            }
+        });
+    });
+}
+
+// $(window).resize(function() {
+//     barchartrender();
+// });
 
 $(document).ready(function(){
     scrollspy();
     init_wow();
     barchartrender();
+    add_contact_form_click();
 });

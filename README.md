@@ -1,4 +1,4 @@
-[Aluminus.com.br](http://aluminus.com.br)
+[Aluminus.com.br](http://startupaluminus.github.io)
 ===================
 
 Website da startup Aluminus.
