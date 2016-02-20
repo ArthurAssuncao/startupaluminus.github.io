@@ -1,5 +1,5 @@
 // AngularJS controllers
-app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toastService) {
+app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, $http, toastService) {
     $scope.openSideMenu = function(){
         $mdSidenav('left').toggle()
             .then(function () {
@@ -8,7 +8,7 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
     }
     $scope.form_send = function(success){
         if (success) {
-            $('#form-email').val("");
+            angular.element('#form-email').val("");
             toastService.showSimpleToastTimeMillis("E-mail cadastrado com sucesso", 1000);
             // $('#form-contact').addClass('animated fadeOutRight');
             // $('#form-contact').hide(500);
@@ -29,9 +29,9 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
     }
 
     $scope.add_contact_form_click = function() {
-        $('#form-contact').click(function(e){
+        angular.element('#form-submit').click(function(e){
             e.preventDefault();
-            $.ajax({
+            $http({
                 url: "//formspree.io/startupaluminus@gmail.com",
                 method: "POST",
                 data: {
@@ -39,13 +39,11 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
                     _replyto: $('#form-email').val(),
                     name: $('#form-email').val()
                   },
-                dataType: "json",
-                success: function(data) {
-                    msg_send(true);
-                },
-                error: function(data) {
-                    msg_send(false);
-                }
+                dataType: "json"
+            }).then(function mySucces(response) {
+                $scope.form_send(true);
+            }, function myError(response) {
+                $scope.form_send(false);
             });
         });
     }
