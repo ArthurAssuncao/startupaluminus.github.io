@@ -6,50 +6,50 @@ app.controller('AppController', function($scope, $timeout, $mdSidenav, $log, toa
                 $log.debug("abrir menu lateral");
             });
     }
-    $scope.form_send = function(success){
-        if (success) {
-            $('#form-email').val("");
-            toastService.showSimpleToastTimeMillis("E-mail cadastrado com sucesso", 1000);
-            // $('#form-contact').addClass('animated fadeOutRight');
-            // $('#form-contact').hide(500);
-            // $('.form-result-ok').show().addClass('animated fadeInLeft');
-            // $('.form-result-ok').attr('position', 'relative');
-        }else{
-            toastService.showSimpleToastTimeMillis("Erro ao cadastrar E-mail", 500);
-            // $('#form-contact').addClass('animated fadeOutLeft');
-            // $('#form-contact').hide(500);
-            // $('.form-result-error').show().addClass('animated fadeInRight');
-            // $('.form-result-error').attr('position', 'relative');
-        };
-    }
-
-    $scope.hide_form_result = function(){
-        // $('.form-result-ok').hide();
-        // $('.form-result-error').hide();
-    }
-
-    $scope.add_contact_form_click = function() {
-        $('#form-contact').click(function(e){
-            e.preventDefault();
-            $.ajax({
-                url: "//formspree.io/startupaluminus@gmail.com",
-                method: "POST",
-                data: {
-                    message: "Cadastrar na newsletter para receber mais informacoes da Aluminus",
-                    _replyto: $('#form-email').val(),
-                    name: $('#form-email').val()
-                  },
-                dataType: "json",
-                success: function(data) {
-                    msg_send(true);
-                },
-                error: function(data) {
-                    msg_send(false);
-                }
-            });
-        });
-    }
-    $scope.add_contact_form_click();
+    // $scope.form_send = function(success){
+    //     if (success) {
+    //         $('#form-email').val("");
+    //         toastService.showSimpleToastTimeMillis("E-mail cadastrado com sucesso", 1000);
+    //         // $('#form-contact').addClass('animated fadeOutRight');
+    //         // $('#form-contact').hide(500);
+    //         // $('.form-result-ok').show().addClass('animated fadeInLeft');
+    //         // $('.form-result-ok').attr('position', 'relative');
+    //     }else{
+    //         toastService.showSimpleToastTimeMillis("Erro ao cadastrar E-mail", 500);
+    //         // $('#form-contact').addClass('animated fadeOutLeft');
+    //         // $('#form-contact').hide(500);
+    //         // $('.form-result-error').show().addClass('animated fadeInRight');
+    //         // $('.form-result-error').attr('position', 'relative');
+    //     };
+    // }
+    //
+    // $scope.hide_form_result = function(){
+    //     // $('.form-result-ok').hide();
+    //     // $('.form-result-error').hide();
+    // }
+    //
+    // $scope.add_contact_form_click = function() {
+    //     $('#form-contact').click(function(e){
+    //         e.preventDefault();
+    //         $.ajax({
+    //             url: "//formspree.io/startupaluminus@gmail.com",
+    //             method: "POST",
+    //             data: {
+    //                 message: "Cadastrar na newsletter para receber mais informacoes da Aluminus",
+    //                 _replyto: $('#form-email').val(),
+    //                 name: $('#form-email').val()
+    //               },
+    //             dataType: "json",
+    //             success: function(data) {
+    //                 msg_send(true);
+    //             },
+    //             error: function(data) {
+    //                 msg_send(false);
+    //             }
+    //         });
+    //     });
+    // }
+    // $scope.add_contact_form_click();
 
 });
 
