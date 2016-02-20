@@ -101,5 +101,4 @@ $(document).ready(function(){
     scrollspy();
     init_wow();
     barchartrender();
-    add_contact_form_click();
 });
